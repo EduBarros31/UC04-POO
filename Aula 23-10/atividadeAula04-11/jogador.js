@@ -1,13 +1,13 @@
 
-const {sistemaAzar} = require('./sistemaAzar')
 
-class jogador{
+
+class Jogador{
    #nome
    #aposta
-   constructor(){
-    this.#nome = 
-    this.#aposta = Math.floor(Math.random()*6, 0)
-   
+   constructor(nome,aposta){
+    this.#nome = nome;        // "This" Este nome da classe recebe o nome do atributo
+    this.#aposta = aposta;
+    Object.freeze(this)
 
 }
 
@@ -25,9 +25,21 @@ get getAposta(){
 set setAposta(aposta){
     this.#aposta = aposta
 }
-
+apresentarDados(){
+   console.log(`Nome do Jogador:${this.getNome},Aposta:${this.getAposta}`); // não esquecer do Template Strings
 
 }
 
 
-module.exports = { jogador }
+
+
+
+}
+
+            
+module.exports = { Jogador }            
+// let jogador01 = new Jogador("Edu",3)//
+// console.log(jogador01.getAposta)//
+ 
+// jogador01.apresentarDados()  // Não  iniciar com letra maiuscula
+                             
