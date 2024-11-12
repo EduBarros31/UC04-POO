@@ -3,10 +3,11 @@ class Veiculo {
       #marca
 
 
-constructor(ano,marca){
-     this.#ano = ano;
-     this.#marca = marca
+constructor(marca,ano){
+    this.#marca = marca
 
+     this.#ano = ano;
+    
 }
 
 

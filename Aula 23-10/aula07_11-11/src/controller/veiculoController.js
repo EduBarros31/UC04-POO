@@ -33,8 +33,39 @@ class VeiculoController{
             console.log('Nenhum veiculo registrado')
         }
     }
+   buscarId(indice){
+    if(bancoVeiculos.length>=indice-1){
+        return true
+    }
+    return false;
+   }
+   editarVeiculo(indice,novosDados){
+     
+        const novoVeiculo = bancoVeiculos[indice-1];
+        if(novosDados.marca){
+            novoVeiculo.setMarca = novosDados.marca
+        }
+        if(novosDados.ano){
+            novoVeiculo.setMarca = novosDados.ano
+        }
+        if(novosDados.modelo){
+            novoVeiculo.setModelo = novosDados.modelo
+        }
+        if(novosDados.cor){
+            novoVeiculo.setCor = novosDados.cor
+        }
+        console.log('Veiculo atualizado com sucesso.Novos Dados:');
+        novoVeiculo.getInfo();
+        bancoVeiculos[indice-1] = novoVeiculo
+     } 
+      
 
-   } 
+
+
+    }  
+
+
+   
 
    module.exports = { VeiculoController }
 
