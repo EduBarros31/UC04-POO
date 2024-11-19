@@ -1,7 +1,7 @@
 const { Tarefa } = require('../models/Tarefa')
 const { TarefasPessoais} = require('../models/TarefasPessoais')
 const { TarefasProfissionais } = require('../models/TarefasProfissionais')
-
+const { Tarefas } = require('../config/DataBaseTarefas-')
 const bancoTarefas = []
 
 class TarefaController{
@@ -28,7 +28,7 @@ class TarefaController{
 
  }
  listarTarefasProfissonais(){
-    
+
  }
 
 
