@@ -58,7 +58,12 @@ class VeiculoController{
         novoVeiculo.getInfo();
         bancoVeiculos[indice-1] = novoVeiculo
      } 
-      
+    excluirVeiculo(indice){
+        
+
+
+
+    }
 
 
 

@@ -17,7 +17,9 @@ get getCPF(){
 
 }
 
-set setCPF
+set setCPF(){
+   
+}
 
 
 

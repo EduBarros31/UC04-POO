@@ -3,7 +3,6 @@ const ClientePJ = require('./Cliente')
 
 
 
-class ClientePJ{
 
     #CNPJ
    
@@ -13,7 +12,7 @@ class ClientePJ{
 
     }
 }    
-   }
+   
 
 get getCNPJ(){
     return this.#CNPJ = CNPJ
