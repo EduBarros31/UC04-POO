@@ -1,4 +1,4 @@
-const { Tarefa } = require("./Tarefa")
+const { Tarefa } = require("./Tarefa");
 
 
 
@@ -6,9 +6,10 @@ class TarefasProfissionais extends Tarefa{
      #prioridade
      #data
 
-constructor(prioridade, data){
-   this.#prioridade = prioridade
-   this.#data = data
+constructor(descricao,prioridade, data){
+   super(descricao);
+   this.#prioridade = prioridade;
+   this.#data = data;
 
 
 }
@@ -19,24 +20,22 @@ get getPrioridade(){
 }
 
 set setPrioridade(prioridade){
-   this.#data = prioridade
+   this.#data = prioridade;
 }
 get getData(){
-   return this.#data = data
+   return this.#data 
 }
-set setData(data){
-   this.#data = data
+set setData(novaData){
+   this.#data = novaData
 }
 
 
 
 getInfo(){
-    console.log(``)
+    console.log('Tarefas Profissionais')
 
-   return(`Prioridade: ${this.getPrioridade}, data: ${this.getData}`)
+   console.log(`Descricao: ${this.getDescricao}, Prioridade: ${this.getPrioridade}, data: ${this.getData}, Status: ${this.getStatus}`)
 }
-
-
 
 
 

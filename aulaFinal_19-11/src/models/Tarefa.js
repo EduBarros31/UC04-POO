@@ -1,3 +1,6 @@
+
+
+
 class Tarefa {
      #descricao
      #status
@@ -6,36 +9,34 @@ class Tarefa {
 
      constructor(descricao){
         this.#descricao = descricao;
+        this.#status = 'Não Finalizada';
+        Object.freeze(this)
 
      
      }
+
+get getDescricao(){
+   return this.#descricao;
+
+
+}
+set setDescricao(novaDeascricao){
+  this.#descricao = novaDeascricao
+}
 
 get getStatus(){
     return this.#status 
 }
 
-realizarTarefa(){
+finalizarTarefa(){
     console.log(`Tarefa finalizada: ${this.getStatus}`)
 }
 
 
 getInfo(){
-  return (`Descricao:${this.#descricao}, Status:${this.getStatus}`)
+  return (`Descricao:${this.getDescricao} - Status:${this.getStatus}`)
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
