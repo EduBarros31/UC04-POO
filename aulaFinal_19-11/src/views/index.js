@@ -1,17 +1,14 @@
-const prompt = require('prompt-sync')();
+
 const { TarefaController } = require('../controller/TarefaController');
-const controller = new TarefaController();
+const tarefaController = new TarefaController();
 
-function adicionarTarefa(){
+let dadosTarefas = {descricao: 'Efetuar', data:'21-11-2024', prioridade: 'alta'};
 
-}
-function listarTarefas(){
+ tarefaController.AdicionarTarefa(dadosTarefas,'privado');
+ tarefaController.AdicionarTarefa(dadosTarefas, 'comum');
+ dadosTarefas = {descricao: 'conferir tarefa', data:'21-11-2024', prioridade:'baixa'};
+ tarefaController.AdicionarTarefa(dadosTarefas, 'Pessoal');
 
-} 
-function listarTarefasPessoais() {
-
-}
-function listarTarefasProfissonais(){
-
-    
-}
+ tarefaController.listarTarefas();
+ tarefaController.listarTarefasPessoais();
+ tarefaController.listarTarefasProfissonais();
